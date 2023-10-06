@@ -24,6 +24,7 @@ class Homescreen extends StatefulWidget{
 class _homeState extends State<Homescreen>{
 
 
+
   MySnackBar(message,context){
     return ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(message),
@@ -33,7 +34,7 @@ class _homeState extends State<Homescreen>{
   }
 
   String selectedSize = '';
-  Color selectedColor = Colors.blue; // Default color
+  Color selectedColor = Colors.grey; // Default color
 
   void changeButtonColor(String size, Color color) {
     setState(() {
@@ -59,81 +60,66 @@ class _homeState extends State<Homescreen>{
                children: [
                  Row(
                    children: [
-                     Container(
-                       height: 50,
-                       width: 80,
-                       child: ElevatedButton(onPressed: (){
+                      ElevatedButton(onPressed: (){
+
                            MySnackBar("Small",context);
-                           changeButtonColor('Small', Colors.green);
+                           changeButtonColor('S', Colors.green);
 
                        },
                            child: Text("S",style: TextStyle(fontSize: 20),),
                          style: ElevatedButton.styleFrom(
-                             primary: selectedSize == 'Large' ? selectedColor : null,
-                           backgroundColor: Colors.grey,
+                             primary: selectedSize == 'S' ? selectedColor : Colors.grey,
                            shape: RoundedRectangleBorder(
                              borderRadius: BorderRadius.circular(10)
                            )
                          ),
                        ),
-                     ),
+
 
                      SizedBox(width: 10),
 
-                     Container(
-                       height: 50,
-                       width: 80,
-                       child: ElevatedButton(onPressed: (){
-                         MySnackBar("Small",context);
-                         changeButtonColor('Small', Colors.green);
+                     ElevatedButton(onPressed: (){
+                       MySnackBar("Medium",context);
+                       changeButtonColor('M', Colors.green);
 
-                       },
-                         child: Text("S",style: TextStyle(fontSize: 20),),
-                         style: ElevatedButton.styleFrom(
-                             primary: selectedSize == 'Large' ? selectedColor : null,
-                             backgroundColor: Colors.grey,
-                             shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(10)
-                             )
-                         ),
+                     },
+                       child: Text("M",style: TextStyle(fontSize: 20),),
+                       style: ElevatedButton.styleFrom(
+                           primary: selectedSize == 'M' ? selectedColor : Colors.grey,
+
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(10)
+                           )
                        ),
                      ),
                      SizedBox(width: 10),
-                     Container(
-                       height: 50,
-                       width: 80,
-                       child: ElevatedButton(onPressed: (){
-                         MySnackBar("Small",context);
-                         changeButtonColor('Small', Colors.green);
+                     ElevatedButton(onPressed: (){
+                       MySnackBar("Large",context);
+                       changeButtonColor('L', Colors.green);
 
-                       },
-                         child: Text("S",style: TextStyle(fontSize: 20),),
-                         style: ElevatedButton.styleFrom(
-                             primary: selectedSize == 'Large' ? selectedColor : null,
-                             backgroundColor: Colors.grey,
-                             shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(10)
-                             )
-                         ),
+                     },
+                       child: Text("L",style: TextStyle(fontSize: 20),),
+                       style: ElevatedButton.styleFrom(
+                           primary: selectedSize == 'L' ? selectedColor : Colors.grey,
+
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(10)
+                           )
                        ),
                      ),
                      SizedBox(width: 10),
-                     Container(
-                       height: 50,
-                       width: 80,
-                       child: ElevatedButton(onPressed: (){
-                         MySnackBar("Small",context);
-                         changeButtonColor('Small', Colors.green);
+                     ElevatedButton(onPressed: (){
+                       MySnackBar("Extra Large",context);
+                       changeButtonColor('XL', Colors.green);
 
-                       },
-                         child: Text("S",style: TextStyle(fontSize: 20),),
-                         style: ElevatedButton.styleFrom(
-                             primary: selectedSize == 'Large' ? selectedColor : null,
-                             backgroundColor: Colors.grey,
-                             shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(10)
-                             )
-                         ),
+                     },
+                       child: Text("XL",style: TextStyle(fontSize: 20),),
+                       style: ElevatedButton.styleFrom(
+                           primary: selectedSize == 'XL' ? selectedColor : Colors.grey,
+
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(10)
+                           )
                        ),
                      ),
 
@@ -143,41 +129,31 @@ class _homeState extends State<Homescreen>{
                  SizedBox(width: 10),
                  Row(
                    children: [
-                     Container(
-                       height: 50,
-                       width: 80,
-                       child: ElevatedButton(onPressed: (){
-                         MySnackBar("Small",context);
-                         changeButtonColor('Small', Colors.green);
+                     ElevatedButton(onPressed: (){
+                       MySnackBar("XXL",context);
+                       changeButtonColor('XXL', Colors.green);
 
-                       },
-                         child: Text("S",style: TextStyle(fontSize: 20),),
-                         style: ElevatedButton.styleFrom(
-                             primary: selectedSize == 'Large' ? selectedColor : null,
-                             backgroundColor: Colors.grey,
-                             shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(10)
-                             )
-                         ),
+                     },
+                       child: Text("XXL",style: TextStyle(fontSize: 20),),
+                       style: ElevatedButton.styleFrom(
+                           primary: selectedSize == 'XXL' ? selectedColor : Colors.grey,
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(10)
+                           )
                        ),
                      ),
                      SizedBox(width: 10),
-                     Container(
-                       height: 50,
-                       width: 80,
-                       child: ElevatedButton(onPressed: (){
-                         MySnackBar("Small",context);
-                         changeButtonColor('Small', Colors.green);
+                     ElevatedButton(onPressed: (){
+                       MySnackBar("XXXL",context);
+                       changeButtonColor('XXXL', Colors.green);
 
-                       },
-                         child: Text("S",style: TextStyle(fontSize: 20),),
-                         style: ElevatedButton.styleFrom(
-                             primary: selectedSize == 'Large' ? selectedColor : null,
-                             backgroundColor: Colors.grey,
-                             shape: RoundedRectangleBorder(
-                                 borderRadius: BorderRadius.circular(10)
-                             )
-                         ),
+                     },
+                       child: Text("XXXL",style: TextStyle(fontSize: 20),),
+                       style: ElevatedButton.styleFrom(
+                           primary: selectedSize == 'XXXL' ? selectedColor : Colors.grey,
+                           shape: RoundedRectangleBorder(
+                               borderRadius: BorderRadius.circular(10)
+                           )
                        ),
                      ),
 
